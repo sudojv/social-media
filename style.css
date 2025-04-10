@@ -1,77 +1,56 @@
 @charset "UTF-8";
 
-body {
-    height: 95vh;
-    background: white url('images/background.jpg') center center / cover fixed;
+* {
+    margin: 0px;
+    padding: 0px;
 }
 
-img#phone {
+body {
+    height: 100vh;
+    width: 100vw;
+    background: white url('images/background.jpg') center center / cover no-repeat fixed;
+}
+
+main {
+    height: 100vh;
+    position: relative;
+}
+
+section#phone {
     position: absolute;
-    display: block;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    height: 95%;
-    margin: auto;
+
+    width: 311px;
+    height: 627px;
+
+    background: url('images/frame-iphone.png') no-repeat;
 }
 
 iframe#screen {
-    position: absolute;
-    display: block;
-    top: 50.4%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    width: 250px;
-    height: 70.5%;
-    margin: auto;
+    position: relative;
+    top: 81px;
+    left: 23px;
+    width: 265px;
+    height: 469px;
 }
 
-div.button {
-    position: absolute;
-    box-shadow: 2px 2px 5px black;
-    left: 86.5%;
+section#buttons {
+    text-align: right;
+}
+
+section#buttons img {
     width: 50px;
-    height: 50px;
+    margin: 10px;
     border-radius: 50%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+    box-sizing: border-box;
 }
 
-div.button:hover {
-    transition: 200ms;
-    border: 1px solid white;
-    box-shadow: 5px 5px 15px black;
-}
-
-div#home {
-    top: 5%;
-    background: white url('images/logo-home.jpg') center center / 50px 50px no-repeat local;
-}
-
-div#whatsapp {
-    top: 15%;
-    background: white url('images/logo-whatsapp.jpg') center center / 50px 50px no-repeat local;
-}
-
-div#linkedin {
-    top: 25%;
-    background: white url('images/logo-linkedin.jpg') center center / 50px 50px no-repeat local;
-}
-
-div#github {
-    top: 35%;
-    background: white url('images/logo-github.jpg') center center / 50px 50px no-repeat local;
-}
-
-
-div#instagram {
-    top: 45%;
-    background: white url('images/logo-instagram.jpg') center center / 50px 50px no-repeat local;
-}
-
-div#github:hover, div#instagram:hover {
-    border: 1px solid black;
-}
-
-div#twitter {
-    top: 55%;
-    background: white url('images/logo-twitter.jpg') center center / 50px 50px no-repeat local;
+section#buttons img:hover {
+    border: 2px solid rgba(255, 255, 255, 0.5);
+    transform: translate(-5px, -3px);
+    box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.5);
+    transition: transform 250ms, border 100ms;
 }
